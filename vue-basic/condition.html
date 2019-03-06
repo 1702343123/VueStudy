@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<title>comdition练习</title>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style type="text/css">
+			.container{
+				display: flex;
+				width:80%;
+				margin:0 auto;
+			}
+			.head{
+				border-bottom:2px solid #EEEEEE;
+				margin-bottom:30px; line-height:20px;
+				
+			}
+			.card{
+				width:200px;
+				height:200px;
+				margin-right:30px;
+				border:3px solid #EEE;
+				border-radius:10px;
+			}
+			.card img{
+				width:100%;
+				height:100%;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+			.info{
+				line-height: 5px;
+			}
+			.p1{
+				font-size: 20px;
+			}
+			.p2{
+				font-size: 15px;
+			}
+			.p3{
+				font-size: 15px;
+				color:dodgerblue;
+			}
+			.p4{
+				font-size: 15px;
+				color:dodgerblue;
+			}
+			/* .p5{
+				font-size: 15px;
+				color: crimson;
+				margin-left:150px;
+			} */
+		</style>
+	</head>
+	<body>
+		<!-- vue-app的根容器 -->
+		<div id="app">
+			<h3 v-if="show" class="head">进行中的班课</h3>
+			<div class="container">
+				<div class="card" v-for="course in courses">
+					<img :src="course.cover" >
+					<div class="info">
+						<p class="p1">{{course.cnumber}}</p>
+						<p class="p2">{{course.name}}</p>
+						<p class="p3" v-if="course.partake">{{course.teacher}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{course.cno}}</p>
+						<!-- <p v-if="course.partake" class="p4">{{course.cno}}</p> -->
+						<p v-else class="p4">{{course.teacher}}</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					show:true,
+					courses:[
+						{
+							cover:'img/vue.jpg',
+							cnumber:'软件1721',
+							name:'Web前端框架技术',
+							teacher:'许莫淇',
+							cno:'432135',
+							partake:true
+						},
+						{
+							cover:'img/spring.jpg',
+							cnumber:'软件1721',
+							name:'轻量级框架技术',
+							teacher:'许莫淇',
+							cno:'546553',
+							partake:true
+						},
+						{
+							cover:'img/java.jpg',
+							cnumber:'软件1721',
+							name:'Web应用开发',
+							teacher:'王萍',
+							cno:'741353',
+							partake:true
+						},
+						{
+							cover:'img/img5.png',
+							cnumber:'软件1721',
+							name:'程序设计基础',
+							teacher:'杨静丽',
+							cno:'747745',
+							partake:false
+						}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>

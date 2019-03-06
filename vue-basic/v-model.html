@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<title>book-bind练习</title>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app的根容器 -->
+		<div id="app">
+			<p>书名：{{name}}</p>
+			<p>作者：{{aucthor}}</p>
+			<img :src="avatar" >
+			<a v-bind:href="url">{{name}}</a>
+			
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					name:'暴力与反暴力',
+					aucthor:'[美]谭旋',
+					url:'https://book.douban.com/subject/30422753/?icn=index-latestbook-subject',
+					avatar:'https://img3.doubanio.com/view/subject/l/public/s29968770.jpg'
+				}
+			})
+		</script>
+	</body>
+</html>

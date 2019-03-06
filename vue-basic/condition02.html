@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<title>condition练习</title>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style type="text/css">
+			.card{
+				width:400px;
+				height:110px;
+				border-radius:50% 50%;
+				/* overflow:hidden; */
+			}
+			.card img{
+				width:100%;
+				height:100%;
+				border-radius:50% 50%;
+			}
+			.card1{
+				height: 100px;
+				width: 100px;
+				float: left;
+				width: 25%;
+			}
+			.card2{
+				padding-top: 20px;
+				line-height: 5px;
+				float: right;
+				width: 70%;
+			}
+			.card3{
+				position: absolute;
+				padding-top: 20px;
+				padding-left:330px;
+			}
+			.p1{
+				font-size: 20px;
+				font-family: "黑体";
+			}
+			.p2{
+				font-size: 15px;
+				color: darkgrey;
+			}
+			.p3{
+				color: green;
+			}
+			.p4{
+				color:dimgray;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- vue-app的根容器 -->
+		<div id="app">
+			<h4 v-if="show">推荐作者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;换一批</h4>
+			<div class="container">
+				<div class="card" v-for="author in authors">
+				    <div class="card1">
+					    <img :src="author.face" >
+				    </div>
+				    <div class="card2">
+						<p class="p1">{{author.name}}</p>
+						<p class="p2">{{author.info}}</p>
+				    </div>
+					<div class="card3">
+						<p v-if="author.attention" class="p3">√ 已关注</p>
+						<p v-else class="p4">+ 关注</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					show:true,
+					authors:[
+					{
+						face:'img/lufei04.jpg',
+						name:'胡七筒',
+						info:'写了325k子·11k喜欢',
+						attention:true
+					},
+					{
+						face:'img/jiuwei.jpg',
+						name:'汪波_偶遇科学',
+						info:'写了302.1k字·1.9k喜欢',
+						attention:true
+					},
+					{
+						face:'img/lufei01.jpg',
+						name:'梅拾璎',
+						info:'写了269.3字·23.4k喜欢',
+						attention:false
+					},
+					{
+						face:'img/qiaoba01.jpg',
+						name:'徐林Grace',
+						info:'写了677.9k字·5.5k喜欢',
+						attention:true
+					},
+					{
+						face:'img/lufei02.jpg',
+						name:'行距版君',
+						info:'写了535.1k字·51.8k喜欢',
+						attention:false
+					}
+					]
+					
+				}
+			})
+		</script>
+	</body>
+</html>
