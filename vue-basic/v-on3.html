@@ -3,25 +3,34 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<title>book-bind练习</title>
+		<title>v-on年龄加减练习</title>
 		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
 	<body>
 		<!-- vue-app的根容器 -->
 		<div id="app">
-			<h2>{{greeting('Afternoon')}}</h2>
-			<h2>{{message}}</h2>
+			<h2>{{age}}</h2>
+			<button type="button" @click="add">加一岁</button>
+			<button type="button" @click="substrct(5)">减五岁</button>
 		</div>
 		<script type="text/javascript">
 			var app=new Vue({
 				el:'#app',
 				data:{
-					message:'Hello Vue!'
+					age:30
 				},
 				methods:{
-					greeting:function(time){
-						return 'Good'+time+'!'
+					add:function(){
+						this.age +=1;
+					},
+					substrct:function(num){
+						this.age -=num;
+						if(this.age-num<=0){
+							alert('减够了！');
+						}else{
+							this.age-=num;
+						}
 					}
 				}
 			})

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<title>v-on年龄加减练习</title>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<style type="text/css">
+				
+			.fllowed{
+				color:#ddd;
+			}
+			.link{
+				cursor:pointer;
+			}
+			.cancle-followed{
+				color:green;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<!-- vue-app的根容器 -->
+		<div id="app">
+			<h2>{{name}}</h2>
+			<span class="followed link" v-show="followed" @click="handleFollow">
+				<i class="icon-ok"></i>已关注
+			</span>
+			<span class="cancle-followed link" v-show="followed===false"
+			 @click="handleFollow">
+				<i class="icon-plus"></i>关注
+			</span>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					name:'简书作者',
+					followed:false
+				},
+				methods:{
+					handleFollow:function(){
+						this.followed= !this.followed;
+					}
+					}
+				
+			})
+		</script>
+	</body>
+</html>

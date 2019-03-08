@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<title>注册综合练习</title>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style type="text/css">
+			.t{
+				font-family: "楷体";
+			}
+			.btn{
+				background-color: cadetblue;
+				width:60px;
+				height:30px;
+				border-radius: 20px;
+				border:1px solid rgb(234,111,90);
+				outline: none;
+			}
+			.write{
+				padding-left: 50px;
+				line-height: 25px;
+			}
+			.result{
+				padding-left: 50px;
+				line-height: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- vue-app的根容器 -->
+		<div id="app">
+			<h2 class="t">{{title}}</h2>
+			<hr>
+			<div class="write">
+				姓名：<input v-model="name" placeholder="请输入姓名" /><br>
+				性别：<input type="radio" id="male" value="男" v-model="picked">
+				<label for="male">男</label>
+				<input type="radio" id="female" value="女" v-model="picked">
+				<label for="female">女</label>
+				<br>
+				出生日期：
+				<select v-model="year" name="year">
+					<option value="">2019</option>
+					<option value="2000">2000</option>
+					<option value="1999">1999</option>
+					<option value="1998">1998</option>
+					<option value="1997">1997</option>
+					<option value="1996">1996</option>
+				</select>年
+				<select v-model="month" name="month">
+					<option value ="">1月</option>
+					<option value ="2">2月</option>
+					<option value ="3">3月</option>
+					<option value ="4">4月</option>
+					<option value ="5">5月</option>
+					<option value ="6">6月</option>
+					<option value ="7">7月</option>
+					<option value ="8">8月</option>
+					<option value ="9">9月</option>
+					<option value ="10">10月</option>
+					<option value ="11">11月</option>
+					<option value ="12">12月</option>
+				</select>月<input v-model="day" style="width: 15px;"/>日
+				<br>
+				手机号码：<input v-model="tel" placeholder="11位"/><br>
+				电子邮箱：<input v-model="email" placeholder="请输入合法邮箱"/><br>
+				兴趣爱好：<input type="checkbox" id="badminton" value="羽毛球" v-model="hobby">
+				<label for="baidu">羽毛球</label>
+				<input type="checkbox" id="basketball" value="篮球" v-model="hobby">
+				<label for="google">篮球</label>
+				<input type="checkbox" id="reading" value="阅读" v-model="hobby">
+				<label for="tencent">阅读</label><br>
+				居住地址：<br>
+				<textarea v-model="address" placeholder="详细地址"></textarea><br>
+			    <button type="button" class="btn" @click="commit">提交</button>
+			</div>
+			<br><hr><hr >
+			<h2 class="t">{{confirm}}</h2><hr >
+			<div class="result">
+				<p>姓名：{{name}}</p>
+				<p>性别：{{picked}}</p>
+				<p>出生日期：{{year}}年{{month}}月{{day}}日</p>
+				<p>手机号码：{{tel}}</p>
+				<p>邮箱：{{email}}</p>
+				<p>兴趣爱好：{{hobby}}</p>
+				<p>地址：{{address}}</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					title:'注册：',
+					confirm:'核对信息：',
+					name:'',
+					picked:'男',
+					tel:'',
+					email:'',
+					hobby: [],
+					address:'',
+					year:'',
+					month:'',
+					day:'',
+				},
+				methods: {
+					commit: function() {
+						alert("Hello,"+this.name+",welcome!");
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

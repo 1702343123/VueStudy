@@ -3,26 +3,34 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<title>book-bind练习</title>
+		<title>v-on隐藏于显示切换练习</title>
 		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	</head>
 	<body>
 		<!-- vue-app的根容器 -->
 		<div id="app">
-			<h2>{{greeting('Afternoon')}}</h2>
-			<h2>{{message}}</h2>
+			<h2 v-if="show">{{name}}</h2>
+			<button type="button" @click="handleClick">隐藏/显示</button>
 		</div>
 		<script type="text/javascript">
 			var app=new Vue({
 				el:'#app',
 				data:{
-					message:'Hello Vue!'
+					name:'软件1721',
+					show:true
 				},
 				methods:{
-					greeting:function(time){
-						return 'Good'+time+'!'
+					handleClick:function(){
+						//取反
+// 						if(this.show===true){
+// 							this.show=false;
+// 						}else{
+// 							this.show=true;
+// 						}
+                       this.show=!this.show;
 					}
+					
 				}
 			})
 		</script>

@@ -10,19 +10,14 @@
 	<body>
 		<!-- vue-app的根容器 -->
 		<div id="app">
-			<h2>{{greeting('Afternoon')}}</h2>
-			<h2>{{message}}</h2>
+			<input type="text" v-model="name" placeholder="请输入"/>
+			<h2>你好，{{name}}</h2>
 		</div>
 		<script type="text/javascript">
 			var app=new Vue({
 				el:'#app',
 				data:{
-					message:'Hello Vue!'
-				},
-				methods:{
-					greeting:function(time){
-						return 'Good'+time+'!'
-					}
+					name:''
 				}
 			})
 		</script>

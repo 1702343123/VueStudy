@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Vue.js表单练习</title>
+		<!-- 通过CDN引入Vue.js -->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="message1" placeholder="编辑我……">
+			<p>输入内容是: {{ message1 }}</p>
+			<hr>
+			<textarea v-model="message2" placeholder="多行文本输入……"></textarea>
+			<p>多行文本域内容是：{{ message2 }}</p>
+			<hr>
+			<input type="checkbox" id="baidu" value="BAIDU" v-model="checkedNames">
+			<label for="baidu">百度</label>
+			<input type="checkbox" id="google" value="GOOGLE" v-model="checkedNames">
+			<label for="google">谷歌</label>
+			<input type="checkbox" id="tencent" value="TENTCENT" v-model="checkedNames">
+			<label for="tencent">腾讯</label>
+			<br>
+			<span>选择的值为: {{ checkedNames }}</span>
+			<br>
+			<label>你一共选了{{checkedNames.length}}个</label>
+			<hr>
+			<input type="radio" id="male" value="male" v-model="picked">
+			<label for="male">男</label>
+			<br>
+			<input type="radio" id="female" value="female" v-model="picked">
+			<label for="female">女</label>
+			<br>
+			<span>选中值为: {{ picked }}</span>
+			<hr>
+			<select v-model="selected" name="fruit">
+				<option value="">选择一个网站</option>
+				<option value="www.baidu.com">百度</option>
+				<option value="www.taobao.com">淘宝</option>
+				<option value="www.niit.edu.cn">南工院</option>
+			</select>
+			<br>
+			<p> 选择的网站是: {{selected}}</p>
+			<br>
+			<button type="button" @click="commit">提交</button>
+			<hr >
+			<h2>结果显示</h2>
+			<div class="result">
+				<p>姓名：{{message1}}</p>
+				<p>性别：{{picked}}</p>
+				<h3>爱好</h3>
+				<ul>
+					<li v-for="item in checkedNames">
+						{{item}}
+					</li>
+				</ul>
+				<p>班级：{{selected}}</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					message1: 'Hello Vue',
+					message2: 'Vue官方教程',
+					checkedNames: [],
+					picked: 'male',
+					selected: ''
+				},
+				methods: {
+					commit: function() {
+						alert(this.message1 + this.picked + this.selected);
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
