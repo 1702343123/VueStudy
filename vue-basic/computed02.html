@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<title>v-on指令练习</title>
+		<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<!-- vue-app的根容器 -->
+		<div id="app">
+			
+			<button type="button" @click="show">调用methods</button>
+			<button tuype="button" @click="show2">调用computed</button>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					name1:'methods',
+					name2:'这是Vue.jsd的computed计算练习'
+				},
+				methods:{
+					show2:function(){
+						alert(this.name1);
+						
+					}
+					},
+				computed:{
+					show:function(){
+						alert(this.name2);
+						
+					}
+				}	
+				
+			})
+		</script>
+	</body>
+</html>
