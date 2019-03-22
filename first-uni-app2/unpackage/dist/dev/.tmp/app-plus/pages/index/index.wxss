@@ -1,0 +1,41 @@
+
+.content {
+		height: 400rpx;
+		margin-top: 10rpx;
+}
+.top{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex; 
+		 -webkit-box-orient: vertical; 
+		 -webkit-box-direction: normal; 
+		 -webkit-flex-direction: column; 
+		     -ms-flex-direction: column; 
+		         flex-direction: column;
+		/* justify-content: space-between;
+		align-content: center; */
+}
+.left{
+		margin-top: 20rpx;
+		margin-left: 10rpx;
+}
+.title{
+		padding-left: 20rpx;
+		padding-top: 40px;
+}
+.image1{
+		width: 50rpx;
+		height: 50rpx;
+		padding-left: 400rpx;
+		padding-top: 40rpx;
+}
+.image2{
+		width: 50rpx;
+		height: 50rpx;
+		padding-left: 500rpx;
+		padding-top: 40rpx;
+}
+	
+	
+

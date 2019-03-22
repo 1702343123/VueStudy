@@ -11,8 +11,8 @@
 		<!-- vue-app的根容器 -->
 		<div id="app">
 			
-			<button type="button" @click="show">调用methods</button>
-			<button tuype="button" @click="show2">调用computed</button>
+			<button type="button" @click="show2">调用methods</button>
+			<button tuype="button" @click="show1">调用computed</button>
 		</div>
 		<script type="text/javascript">
 			var app=new Vue({
@@ -28,7 +28,7 @@
 					}
 					},
 				computed:{
-					show:function(){
+					show1:function(){
 						alert(this.name2);
 						
 					}
