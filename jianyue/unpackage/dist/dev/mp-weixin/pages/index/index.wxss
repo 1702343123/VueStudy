@@ -1,0 +1,114 @@
+
+.container {
+	margin-top: 5px;
+}
+.article {
+	border: 1px solid rgb(238, 238, 238);
+	border-radius: 6px;
+	margin-bottom: 7px;
+}
+.article-title {
+	font-weight: 700;
+	font-size: 15px;
+}
+.thumbnail-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: 80px;
+}
+.thumbnail-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 33%;
+	    -ms-flex: 1 1 33%;
+	        flex: 1 1 33%;
+}
+.title {
+	margin-bottom: 5px;
+}
+.img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.article-info {
+	margin-top: 5px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	height: 40px;
+}
+.avatar1 {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 5px;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.info-text {
+	margin-right: 10px;
+	line-height: 40px;
+	color: #888888;
+}
+.text-img-box {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: 100px;
+}
+.left {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 60%;
+	    -ms-flex: 1 1 60%;
+	        flex: 1 1 60%;
+}
+.right {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 40%;
+	    -ms-flex: 1 1 40%;
+	        flex: 1 1 40%;
+}
+.circle-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: #de533a;
+	background: -o-linear-gradient(50deg, #ffd86f, #fc6262);
+	background: linear-gradient(40deg, #ffd86f, #fc6262);
+	-webkit-box-shadow: 2px 5px 10px #D1D1D1;
+	        box-shadow: 2px 5px 10px #D1D1D1;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.icon-text {
+	font-size: 40pt;
+	color: #fff;
+	/* line-height: 44px;
+	justify-content: center; */
+	margin-bottom: 8px;
+}
+

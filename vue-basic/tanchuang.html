@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#dialog{
+        width:250px;
+        height:120px;
+        position:absolute;
+        right:0px;
+        bottom:3px;
+        background-color:green;
+        color:white;
+        text-align: center;
+    }
+    .hide{
+        display: none;
+    }
+</style>
+	<body>
+		<button type="button">click</button>
+		<div id="dialog" class="hide">
+			<p class="title"></p>
+			<p class="msg"></p>
+			<p class="uname"></p>
+		</div>
+		<script src="../js/jquery.js"></script>
+		<script>
+			function show(t, m, u) {
+				$(".title").html(t);
+				$(".msg").html(m);
+				$(".uname").html(u);
+
+				setTimeout(function() {
+					$("#dialog").addClass("hide");
+				}, 5000); //5秒后隐藏
+			}
+			$("button").on("click", function() {
+				$("#dialog").removeClass("hide");
+				show("张三", "信息内容", "www.qq.com");
+			})
+		</script>
+	</body>
+</html>

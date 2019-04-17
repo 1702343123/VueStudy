@@ -1,0 +1,26 @@
+
+.old.data-v-2d700834{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	-webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+}
+.new.data-v-2d700834{
+	margin-top: 20px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+.input.data-v-2d700834{
+	border-bottom: 1px solid rgb(244,244,244);
+}
+
+

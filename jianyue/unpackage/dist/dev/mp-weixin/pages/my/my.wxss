@@ -1,0 +1,115 @@
+
+.avatar-box.data-v-42f646f4 {
+	text-align: center;
+	margin-top: 10px;
+}
+.info-box.data-v-42f646f4 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 13px;
+}
+.nname.data-v-42f646f4 {
+	padding-left: 105px;
+	margin-right: 20px;
+}
+.set.data-v-42f646f4 {
+	color: rgb(26, 173, 25);
+}
+.middle.data-v-42f646f4 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	text-align: center;
+}
+.information.data-v-42f646f4 {
+	width: 70%;
+	/* margin-right: 10px; */
+	text-align: center;
+	/* margin-left: 10px; */
+	border-right: 1px solid #8F8F94;
+}
+.un.data-v-42f646f4 {
+	font-family: "\9ED1\4F53";
+	font-size: 25px;
+}
+.text.data-v-42f646f4 {
+	font-size: 13px;
+}
+.bottom.data-v-42f646f4 {
+	margin-top: 20px;
+}
+.crt.data-v-42f646f4 {
+	margin-bottom: 30px;
+	border-top: 1px solid #8F8F94;
+	/* border-left-color: #8F8F94;
+	border-left-width: 2px; */
+}
+.btn.data-v-42f646f4 {
+	margin-top: 20px;
+	margin-left: 124px;
+	color: rgb(26, 173, 25);
+}
+.signup.data-v-42f646f4 {
+	margin-top: 10px;
+	margin-left: 120px;
+	color: rgb(31, 199, 253);
+	font-size: 13px;
+}
+.list-item.data-v-42f646f4{
+	height: 50px;
+	margin-right: 10px;
+}
+.list-item2.data-v-42f646f4{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.title.data-v-42f646f4{
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: 500px;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 80%;
+	    -ms-flex: 1 1 80%;
+	        flex: 1 1 80%;
+}
+.delete.data-v-42f646f4{
+	line-height: 50px;
+	font-size: 13px;
+	color: #FC6262;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 20%;
+	    -ms-flex: 1 1 20%;
+	        flex: 1 1 20%;
+}
+.list_user-item.data-v-42f646f4{
+	margin-right: 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	border-bottom: 1px solid rgb(244,244,244);
+}
+.touser_avatar.data-v-42f646f4{
+	margin-bottom: 2px;
+	margin-top: 2px;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+}
+.touser_name.data-v-42f646f4{
+	margin-left: 15px;
+	margin-top: 20px;
+	font-size: 13px;
+}
+.cancelFollow.data-v-42f646f4{
+	font-size: 15px;
+	margin-top: 20px;
+	color: #2FBF79;
+	padding-left: 100px;
+}
+
