@@ -1,7 +1,12 @@
 <template>
 	<view class="container">
-		<input class="uni-input" password type="text" placeholder="输入密码" v-model="password" required="required" />
-		<button  @tap="signUp(userDTO)" type="primary">注册</button>
+		<view class="one" style="border-bottom: 2px solid rgb(234,111,90);margin-left: 10px;margin-right: 20px;">
+		    <input class="uni-input" password type="text" placeholder="输入密码" v-model="password" required="required" />
+		</view>
+		<view class="two" style="border-bottom: 2px solid rgb(234,111,90);margin-left: 10px;margin-right: 20px;margin-bottom: 20px;">
+		    <input class="uni-input" password type="text" placeholder="确认密码" v-model="password2" required="required" />
+		</view>
+		<button  @tap="signUp(userDTO)" type="primary" style="background: rgb(234,111,90);">立即注册</button>
 	</view>
 </template>
 
@@ -11,7 +16,8 @@ export default {
 		return {
 			userDTO: {
 				mobile: '',
-				password: ''
+				password: '',
+				password2:''
 			}
 		};
 	},
@@ -22,32 +28,47 @@ export default {
 	},
 	methods: {
 		signUp: function(userDTO) {
-			var _this = this;
-			uni.request({
-				url: this.apiServer + '/user/sign_up',
-				method: 'POST',
-				header: { 'content-type': 'application/json' },
-				data: {
-					mobile: _this.mobile,
-					password: _this.password
-				},
-				success: res => {
-				  	if (res.data.code === 0) {
-	                uni.showModal({
-						title: '提示',
-						content: '注册成功'
-					})
-					uni.navigateTo({
-						url: '../signin/signin'
-						});
-					} else {
-						uni.showModal({
+			if(this.password===this.password2){
+				var _this = this;
+				uni.request({
+					url: this.apiServer + '/user/sign_up',
+					method: 'POST',
+					header: { 'content-type': 'application/json' },
+					data: {
+						mobile: _this.mobile,
+						password: _this.password
+					},
+					success: res => {
+					  	if (res.data.code === 0) {
+				        uni.showModal({
 							title: '提示',
-							content: res.data.msg
+							content: '注册成功,是否立即登录？',
+							success:function(res){
+								if(res.confirm){
+									uni.navigateTo({
+										url: '../signin/signin'
+									});
+								}
+							}
 						});
+// 						uni.navigateTo({
+// 							url: '../signin/signin'
+// 							});
+						} else {
+							uni.showModal({
+								title: '提示',
+								content: res.data.msg
+							});
+						}
 					}
-				}
-			});
+				});
+			}else{
+				uni.showModal({
+					title:'提示',
+					content:'两次密码不一致！'
+				});
+			}
+			
 		}
 	}
 };
@@ -56,7 +77,7 @@ export default {
 <style>
 	.uni-input{
 		margin-left: 10px;
-		margin-top: 15px;
+		margin-top: 20px;
 		margin-bottom: 10px;
 	}
 </style>

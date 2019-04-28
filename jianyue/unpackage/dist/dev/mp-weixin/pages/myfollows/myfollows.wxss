@@ -1,0 +1,13 @@
+
+.btn.data-v-a0e1463c{
+	height: 26px;
+	/* width: 50px; */
+	font-size: 15px;
+	line-height: 26px;
+	margin-top: 13px;
+	border:1px solid rgb(248,248,248) !important; 
+	color: rgb(234,111,90);
+	background:none !important; 
+	letter-spacing: 1px;
+}
+

@@ -1,1 +1,6 @@
+<import src="/graceUI/components/graceMaskView.vue.wxml" />
+
+<template name="data-v-4fa8bfc4-default-601db433-0"><view style="padding:25px; padding-bottom:30px;" class="_view data-v-4fa8bfc4"><text class="_text data-v-4fa8bfc4 text" style="padding:90px 90px;font-weight: 500;font-size: 20px;">签到成功</text></view></template>
+
+<template name="bb8470ae-default-bb8470ae-0"><view class="_view bb8470ae"><view style="height: 30px;" class="_view bb8470ae"></view><view style="margin-left: 20px;font-size: 15px;" class="_view bb8470ae">修改昵称</view><view class="_view bb8470ae input"><input class="_input bb8470ae rename" type="text" value="{{changenickname}}" bindinput="handleProxy" placeholder="请输入新昵称" data-eventid="{{'bb8470ae-1'}}" data-comkey="{{$k}}" /></view><view style="height: 30px;" class="_view bb8470ae"></view><label class="_span bb8470ae submit" bindtap="handleProxy" data-eventid="{{'bb8470ae-2'}}" data-comkey="{{$k}}">确定</label><view style="height: 20px;" class="_view bb8470ae"></view></view></template>
 

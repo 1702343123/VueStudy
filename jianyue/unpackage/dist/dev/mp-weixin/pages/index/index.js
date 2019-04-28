@@ -164,6 +164,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 {
   data: function data() {
     return {
@@ -330,11 +332,11 @@ var render = function() {
         "navigator",
         { attrs: { url: "../write/write", "hover-class": "navigator-hover" } },
         [
-          _c("button", { staticClass: "circle-btn" }, [
-            _c("text", { staticClass: "icon-text" }, [_vm._v("+")])
-          ])
-        ],
-        1
+          _c("image", {
+            staticClass: "new",
+            attrs: { src: "../../static/newarticle.png" }
+          })
+        ]
       )
     ],
     2

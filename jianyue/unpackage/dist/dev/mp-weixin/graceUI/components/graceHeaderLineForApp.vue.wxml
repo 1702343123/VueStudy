@@ -1,0 +1,1 @@
+<template name="74da1b88"><view class="_view 74da1b88"><view wx:if="{{isImmersedStatusbar}}" class="_view 74da1b88" style=" {{('background:' + bgColor + ';' + 'height:' + height + ';')}}"></view></view></template>

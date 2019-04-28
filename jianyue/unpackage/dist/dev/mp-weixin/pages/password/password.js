@@ -121,12 +121,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
 {
   data: function data() {
     return {
       userDTO: {
         mobile: '',
-        password: '' } };
+        password: '',
+        password2: '' } };
 
 
   },
@@ -137,31 +143,46 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     signUp: function signUp(userDTO) {
-      var _this = this;
-      uni.request({
-        url: this.apiServer + '/user/sign_up',
-        method: 'POST',
-        header: { 'content-type': 'application/json' },
-        data: {
-          mobile: _this.mobile,
-          password: _this.password },
+      if (this.password === this.password2) {
+        var _this = this;
+        uni.request({
+          url: this.apiServer + '/user/sign_up',
+          method: 'POST',
+          header: { 'content-type': 'application/json' },
+          data: {
+            mobile: _this.mobile,
+            password: _this.password },
 
-        success: function success(res) {
-          if (res.data.code === 0) {
-            uni.showModal({
-              title: '提示',
-              content: '注册成功' });
+          success: function success(res) {
+            if (res.data.code === 0) {
+              uni.showModal({
+                title: '提示',
+                content: '注册成功,是否立即登录？',
+                success: function success(res) {
+                  if (res.confirm) {
+                    uni.navigateTo({
+                      url: '../signin/signin' });
 
-            uni.navigateTo({
-              url: '../signin/signin' });
+                  }
+                } });
 
-          } else {
-            uni.showModal({
-              title: '提示',
-              content: res.data.msg });
+              // 						uni.navigateTo({
+              // 							url: '../signin/signin'
+              // 							});
+            } else {
+              uni.showModal({
+                title: '提示',
+                content: res.data.msg });
 
-          }
-        } });
+            }
+          } });
+
+      } else {
+        uni.showModal({
+          title: '提示',
+          content: '两次密码不一致！' });
+
+      }
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
@@ -198,44 +219,99 @@ var render = function() {
     "view",
     { staticClass: "container" },
     [
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.password,
-            expression: "password"
+      _c(
+        "view",
+        {
+          staticClass: "one",
+          staticStyle: {
+            "border-bottom": "2px solid rgb(234,111,90)",
+            "margin-left": "10px",
+            "margin-right": "20px"
           }
-        ],
-        staticClass: "uni-input",
-        attrs: {
-          password: "",
-          type: "text",
-          placeholder: "输入密码",
-          required: "required",
-          eventid: "1c705e7a-0"
         },
-        domProps: { value: _vm.password },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticClass: "uni-input",
+            attrs: {
+              password: "",
+              type: "text",
+              placeholder: "输入密码",
+              required: "required",
+              eventid: "1c705e7a-0"
+            },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
             }
-            _vm.password = $event.target.value
+          })
+        ]
+      ),
+      _c(
+        "view",
+        {
+          staticClass: "two",
+          staticStyle: {
+            "border-bottom": "2px solid rgb(234,111,90)",
+            "margin-left": "10px",
+            "margin-right": "20px",
+            "margin-bottom": "20px"
           }
-        }
-      }),
+        },
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password2,
+                expression: "password2"
+              }
+            ],
+            staticClass: "uni-input",
+            attrs: {
+              password: "",
+              type: "text",
+              placeholder: "确认密码",
+              required: "required",
+              eventid: "1c705e7a-1"
+            },
+            domProps: { value: _vm.password2 },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password2 = $event.target.value
+              }
+            }
+          })
+        ]
+      ),
       _c(
         "button",
         {
-          attrs: { type: "primary", eventid: "1c705e7a-1" },
+          staticStyle: { background: "rgb(234,111,90)" },
+          attrs: { type: "primary", eventid: "1c705e7a-2" },
           on: {
             tap: function($event) {
               _vm.signUp(_vm.userDTO)
             }
           }
         },
-        [_vm._v("注册")]
+        [_vm._v("立即注册")]
       )
     ],
     1

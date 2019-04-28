@@ -76,9 +76,22 @@
 	    -ms-flex: 1 1 40%;
 	        flex: 1 1 40%;
 }
+.new{
+	position: fixed;
+	bottom: 70px;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	-webkit-box-shadow: 2px 5px 10px #B2B2B2;
+	        box-shadow: 2px 5px 10px #B2B2B2;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+}
 .circle-btn {
 	position: fixed;
-	bottom: 20px;
+	bottom: 70px;
 	right: 20px;
 	width: 44px;
 	height: 44px;
@@ -91,24 +104,34 @@
 	cursor: pointer;
 	border: none;
 	outline: none;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+}
+.icon-jia{
+	width: 35px;
+	height: 35px;
+	/* position: fixed; */
+	line-height: 44px;
+	margin-top: 5px;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	    -ms-flex-align: center;
 	        align-items: center;
+	/* padding-right: 60px; */
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 .icon-text {
-	font-size: 40pt;
+	font-size: 15pt;
 	color: #fff;
-	/* line-height: 44px;
-	justify-content: center; */
-	margin-bottom: 8px;
+	line-height: 44px;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	/* margin-bottom: 8px; */
 }
 

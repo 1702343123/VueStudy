@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -135,7 +135,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-{
+// var graceChecker = require("../../graceUI/graceChecker.js");
+var _default = {
   data: function data() {
     return {
       show: true,
@@ -144,52 +145,75 @@ __webpack_require__.r(__webpack_exports__);
       mobile: '',
       verifyCode: '' };
 
+
+
   },
   onLoad: function onLoad() {},
   methods: {
 
-    getCode: function getCode() {var _this2 = this;
-      var TIME_COUNT = 60;
-      if (!this.timer) {
-        this.count = TIME_COUNT;
-        this.show = false;
-        this.timer = setInterval(function () {
-          if (_this2.count > 0 && _this2.count <= TIME_COUNT) {
-            _this2.count--;
-          } else {
-            _this2.show = true;
-            clearInterval(_this2.timer);
-            _this2.timer = null;
-          }
-        }, 1000);
+    // 			getCode() {
+    // 				const TIME_COUNT = 60;
+    // 				if (!this.timer) {
+    // 					this.count = TIME_COUNT;
+    // 					this.show = false;
+    // 					this.timer = setInterval(() => {
+    // 						if (this.count > 0 && this.count <= TIME_COUNT) {
+    // 							this.count--;
+    // 						} else {
+    // 							this.show = true;
+    // 							clearInterval(this.timer);
+    // 							this.timer = null;
+    // 						}
+    // 					}, 1000)
+    // 				}
+    // 			},
+
+    getVerifyCode: function getVerifyCode() {var _this2 = this;
+      var myreg = /^[1][1,2,3,4,5,7,8,9][0-9]{9}$/;
+      if (!myreg.test(this.mobile)) {
+        uni.showToast({ title: '请正确填写手机号码', icon: "none" });
+        return false;
+      } else {
+        var _this = this;
+        uni.request({
+          url: this.apiServer + '/user/verify',
+          method: 'POST',
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' },
+
+          data: {
+            mobile: _this.mobile },
+
+          success: function success(res) {
+            if (res.data.code === 0) {
+              uni.showToast({
+                title: '验证码已发送' });
+
+              _this.disabled = true;
+              console.log(_this.disabled);
+              var TIME_COUNT = 60;
+              if (!_this2.timer) {
+                _this2.count = TIME_COUNT;
+                _this2.show = false;
+                _this2.timer = setInterval(function () {
+                  if (_this2.count > 0 && _this2.count <= TIME_COUNT) {
+                    _this2.count--;
+                  } else {
+                    _this2.show = true;
+                    clearInterval(_this2.timer);
+                    _this2.timer = null;
+                  }
+                }, 1000);
+              };
+            } else {
+              uni.showModal({
+                title: '提示',
+                content: res.data.msg });
+
+            }
+          } });
+
       }
-    },
-
-    getVerifyCode: function getVerifyCode() {
-      var _this = this;
-      uni.request({
-        url: this.apiServer + '/user/verify',
-        method: 'POST',
-        header: {
-          'content-type': 'application/x-www-form-urlencoded' },
-
-        data: {
-          mobile: _this.mobile },
-
-        success: function success(res) {
-          if (res.data.code === 0) {
-            uni.showToast({
-              title: '验证码已发送' });
-
-            _this.disabled = true;
-            console.log(_this.disabled);
-          } else {
-            uni.showModal({
-              title: '提示',
-              content: res.data.msg });
-
-          }
-        } });
 
     },
     checkCode: function checkCode() {
@@ -325,12 +349,7 @@ var render = function() {
               ],
               staticClass: "text",
               attrs: { eventid: "c4613dba-2" },
-              on: {
-                click: function($event) {
-                  _vm.getCode()
-                },
-                tap: _vm.getVerifyCode
-              }
+              on: { tap: _vm.getVerifyCode }
             },
             [_vm._v("获取验证码")]
           ),
@@ -347,17 +366,29 @@ var render = function() {
               ],
               staticClass: "count"
             },
-            [_vm._v(_vm._s(_vm.count) + "s后重新获得")]
+            [_vm._v(_vm._s(_vm.count) + "s 后重新获得")]
           )
         ])
       ]),
       _c(
         "button",
         {
-          attrs: { type: "primary", eventid: "c4613dba-3" },
-          on: { tap: _vm.checkCode }
+          staticStyle: { background: "rgb(234,111,90)", "margin-top": "30px" },
+          attrs: {
+            "form-type": "submit",
+            type: "primary",
+            eventid: "c4613dba-3"
+          },
+          on: {
+            tap: function($event) {
+              _vm.checkCode()
+            }
+          }
         },
-        [_vm._v("下一步")]
+        [
+          _vm._v("下一步"),
+          _c("text", { staticClass: "grace-iconfont icon-arrow-right" })
+        ]
       )
     ],
     1

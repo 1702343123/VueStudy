@@ -1,115 +1,189 @@
 
-.avatar-box.data-v-42f646f4 {
-	text-align: center;
-	margin-top: 10px;
-}
-.info-box.data-v-42f646f4 {
+.grace-swiper-msg{width:100%; padding:10rpx 0; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-flex-wrap:nowrap; -ms-flex-wrap:nowrap; flex-wrap:nowrap;}
+.grace-swiper-msg-icon{width:20px; margin:5px; -webkit-flex-shrink:0; -ms-flex-negative:0; flex-shrink:0;}
+.grace-swiper-msg-icon image{width:20px; height:20px;}
+.grace-swiper-msg swiper{width:100%; height:30px;}
+.grace-swiper-msg swiper-item{line-height:30px;}
+.grace-swiper-msg navigator{line-height:30px;}
+/*
+版权声明 : 
+GraceUI 的版权约束是不能转售或者将 GraceUI 直接发布到公开渠道！
+侵权必究，请遵守版权约定！
+*/
+
+
+.top.data-v-42f646f4 {
+	/* position: fixed; */
+	margin-top: 5px;
+	margin-right: 15px;
+	width: 100%;
+	height: 30px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	font-size: 13px;
+	line-height: 30px;
+	background: #ffffff;
+	/* position: fixed;
+	margin-top: 5px;
+	width: 100%;
+	height: 15px;
+	display: flex;
+	line-height: 15px; */
 }
-.nname.data-v-42f646f4 {
-	padding-left: 105px;
-	margin-right: 20px;
-}
-.set.data-v-42f646f4 {
-	color: rgb(26, 173, 25);
-}
-.middle.data-v-42f646f4 {
+.info.data-v-42f646f4 {
+	margin-top: 10px;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	text-align: center;
-}
-.information.data-v-42f646f4 {
-	width: 70%;
-	/* margin-right: 10px; */
-	text-align: center;
-	/* margin-left: 10px; */
-	border-right: 1px solid #8F8F94;
-}
-.un.data-v-42f646f4 {
-	font-family: "\9ED1\4F53";
-	font-size: 25px;
-}
-.text.data-v-42f646f4 {
-	font-size: 13px;
-}
-.bottom.data-v-42f646f4 {
-	margin-top: 20px;
-}
-.crt.data-v-42f646f4 {
-	margin-bottom: 30px;
-	border-top: 1px solid #8F8F94;
-	/* border-left-color: #8F8F94;
-	border-left-width: 2px; */
-}
-.btn.data-v-42f646f4 {
-	margin-top: 20px;
-	margin-left: 124px;
-	color: rgb(26, 173, 25);
-}
-.signup.data-v-42f646f4 {
-	margin-top: 10px;
-	margin-left: 120px;
-	color: rgb(31, 199, 253);
-	font-size: 13px;
-}
-.list-item.data-v-42f646f4{
 	height: 50px;
-	margin-right: 10px;
 }
-.list-item2.data-v-42f646f4{
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-.title.data-v-42f646f4{
-	line-height: 50px;
-	font-size: 15px;
-	font-weight: 500px;
-	-webkit-box-flex: 1;
-	-webkit-flex: 1 1 80%;
-	    -ms-flex: 1 1 80%;
-	        flex: 1 1 80%;
-}
-.delete.data-v-42f646f4{
-	line-height: 50px;
-	font-size: 13px;
-	color: #FC6262;
+.avatar-box.data-v-42f646f4 {
+	margin-left: 15px;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 20%;
 	    -ms-flex: 1 1 20%;
 	        flex: 1 1 20%;
 }
-.list_user-item.data-v-42f646f4{
-	margin-right: 10px;
+.name-box.data-v-42f646f4 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 80%;
+	    -ms-flex: 1 1 80%;
+	        flex: 1 1 80%;
+	/* margin-left: 5px; */
+	line-height: 25px;
+}
+.middle.data-v-42f646f4 {
+	margin-top: 15px;
+	/* height: 70px; */
+	width: 90%;
+	margin-left: 15px;
+	-webkit-box-shadow: 2px 2px 2px 2px #8a8a8a;
+	        box-shadow: 2px 2px 2px 2px #8a8a8a;
+	border: none;
+	border-radius: 5px;
+}
+.one.data-v-42f646f4 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	border-bottom: 0.5px solid #707070;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 30px;
+	line-height: 30px;
+}
+.two-img.data-v-42f646f4 {
+	height: 40px;
+	width: 40px;
+}
+.guanggao1-img.data-v-42f646f4{
+	border-radius: 5px;
+	height: 50px;
+	width: 90%;
+	margin-left: 15px;
+}
+
+/* .info-box {
+	display: flex;
+	font-size: 13px;
+}
+
+.nname {
+	padding-left: 105px;
+	margin-right: 20px;
+}
+
+.set {
+	color: rgb(26, 173, 25);
+}
+
+.middle {
+	display: flex;
+	text-align: center;
+}
+
+.information {
+	width: 70%;
+	
+	text-align: center;
+	
+	border-right: 1px solid #8F8F94;
+}
+
+.un {
+	font-family: "黑体";
+	font-size: 25px;
+}
+
+.text {
+	font-size: 13px;
+}
+
+.bottom {
+	margin-top: 20px;
+}
+
+.crt {
+	margin-bottom: 30px;
+	border-top: 1px solid #8F8F94;
+	
+}
+
+.btn {
+	margin-top: 20px;
+	margin-left: 124px;
+	color: rgb(26, 173, 25);
+}
+
+.signup {
+	margin-top: 10px;
+	margin-left: 120px;
+	color: rgb(31, 199, 253);
+	font-size: 13px;
+}
+.list-item{
+	height: 50px;
+	margin-right: 10px;
+}
+.list-item2{
+	display: flex;
+}
+.title{
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: 500px;
+	flex: 1 1 80%;
+}
+.delete{
+	line-height: 50px;
+	font-size: 13px;
+	color: #FC6262;
+	flex: 1 1 20%;
+}
+.list_user-item{
+	margin-right: 10px;
+	display: flex;
 	border-bottom: 1px solid rgb(244,244,244);
 }
-.touser_avatar.data-v-42f646f4{
+.touser_avatar{
 	margin-bottom: 2px;
 	margin-top: 2px;
 	height: 55px;
 	width: 55px;
 	border-radius: 50%;
 }
-.touser_name.data-v-42f646f4{
+.touser_name{
 	margin-left: 15px;
 	margin-top: 20px;
 	font-size: 13px;
 }
-.cancelFollow.data-v-42f646f4{
+.cancelFollow{
 	font-size: 15px;
 	margin-top: 20px;
 	color: #2FBF79;
 	padding-left: 100px;
-}
+} */
 

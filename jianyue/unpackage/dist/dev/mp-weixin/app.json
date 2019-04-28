@@ -12,7 +12,9 @@
     "pages/signup/signup",
     "pages/password/password",
     "pages/article_detail/article_detail",
-    "pages/one/one"
+    "pages/one/one",
+    "pages/myarticles/myarticles",
+    "pages/myfollows/myfollows"
   ],
   "subPackages": [],
   "window": {

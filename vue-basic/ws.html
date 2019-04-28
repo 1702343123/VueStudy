@@ -31,7 +31,7 @@
 				created: function() {
 					var _this = this;
 					//创建WebSocket对象，指定要连接的服务器地址和端口，建立连接
-					socket = new WebSocket("ws://192.168.43.4:8080/websocket");
+					socket = new WebSocket("ws://localhost:8080/websocket");
 					//打开连接
 					socket.onopen = function() {
 						console.log("Socket已打开");

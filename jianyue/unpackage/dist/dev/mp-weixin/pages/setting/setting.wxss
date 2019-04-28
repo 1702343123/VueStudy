@@ -1,0 +1,20 @@
+
+.list-title{
+	color: rgb(234,111,90);
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 13px;
+}
+.title{
+}
+.btnone{
+	border:1px solid rgb(234,111,90) !important; 
+	background:none !important; 
+	color:rgb(234,111,90) !important; 
+	width:180px; 
+	height:90rpx; 
+	line-height:90rpx;
+	font-size:40rpx !important;
+	letter-spacing:3px;
+}
+

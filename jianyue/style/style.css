@@ -1,13 +1,13 @@
-*{
+/* *{
 	font-size: 14px;
-}
+} */
 .container {
 	width: 95%;
 	margin: 0 auto;
 }
 .avatar {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50%;
 }
 .list {

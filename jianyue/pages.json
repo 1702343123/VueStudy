@@ -23,7 +23,9 @@
 		},
 		{
 			"path": "pages/signin/signin",
-			"style": {}
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
 		},
 		{
 			"path": "pages/write/write",
@@ -42,7 +44,9 @@
 		{
 			"path":"pages/user_info/user_info",
 			"style":{
-				"navigationBarTitleText": "个人资料"
+				"navigationBarTitleText": "个人资料",
+				//允许下拉刷新
+				"enablePullDownRefresh": true
 			}
 		},
 		{
@@ -73,6 +77,24 @@
 			"path":"pages/one/one",
 			"style":{
 				"navigationBarTitleText": "内容"
+			}
+		},
+		{
+			"path":"pages/myarticles/myarticles",
+			"style":{
+				"navigationBarTitleText": "我的文章"
+			}
+		},
+		{
+			"path":"pages/myfollows/myfollows",
+			"style":{
+				"navigationBarTitleText": "我的关注"
+			}
+		},
+		{
+			"path":"pages/changepassword/changepassword",
+			"style":{
+				"navigationBarTitleText": "重置密码"
 			}
 		}
 		
